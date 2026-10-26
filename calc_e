@@ -1,0 +1,8 @@
+from calc_c import calc_c
+
+def calc_e(alpha, beta, state="non"):
+
+    aperp = alpha + 90
+    bperp = beta + 90
+
+    return (calc_c(alpha, beta, state) + calc_c(aperp, bperp, state) - calc_c(alpha, bperp, state) - calc_c(aperp, beta, state))/(calc_c(alpha, beta, state) + calc_c(aperp, bperp, state) + calc_c(alpha, bperp, state) + calc_c(aperp, beta, state))
